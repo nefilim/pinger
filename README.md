@@ -9,8 +9,10 @@ A simple network latency and packet loss monitor, with beautiful graphs in Grafa
 1. Clone this repo locally where you have space to host the data gathered (one GB should be plenty!) 
 1. [Install Docker 17.12.0+ (preferably 18.02.0+)](https://docs.docker.com/install/)
 1. [Install the latest Docker Compose](https://docs.docker.com/compose/install/)
-
-
+1. Create directories for data for storage: 
+  * `mkdir grafana-data prometheus-data`
+  * `chown 472 grafana-data`
+  
 ### Configuration
 
 1. Modify `etc/application.conf` to include the hosts you want to monitor
@@ -27,7 +29,7 @@ Your Grafana & Prometheus data will be stored on your docker host in `./grafana-
 
 ### Setting up Grafana
 
-1. Login with the default credentials (admin/admin)
+1. Login with the default credentials (admin/admin) at http://your_docker_host:3000
 1. Change the admin credentials or click Skip
 1. Click on `Create your first data source`
 1. Select Prometheus
@@ -40,8 +42,8 @@ Your Grafana & Prometheus data will be stored on your docker host in `./grafana-
 1. In the Metrics tab for Series A enter the following prometheus query: `average_latency{network="internal"}`
 1. In the Legend format box below enter: `{{host}}`
 1. In the General Tab enter a suitable title `Internal Latency`
-1. Repeat this process for additional networks and for packet loss (`average_packetloss{network="X"}`)
-
+1. Repeat this process for additional networks and for packet loss (`average_packetloss{network="X"}`) - I like to set the Y axis minimum to 0 for packet loss
+1. **IMPORTANT:** save your new dashboard with Cmd+S / Ctrl+S 
 
 
 

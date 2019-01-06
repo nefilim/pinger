@@ -19,6 +19,9 @@ services:
     restart: always
     ports:
       - 9090:9090
+    command:
+      # prometheus retention period
+      - '--storage.tsdb.retention=7d'
     networks:
       - pinger-net
     volumes: 
@@ -28,6 +31,7 @@ services:
       - type: bind
         source: ./prometheus-data
         target: /prometheus
+    user: 0:0
 
   pinger:
     image: nefilim/pinger:1.0
