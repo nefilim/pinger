@@ -9,7 +9,7 @@ A simple network latency and packet loss monitor, with beautiful graphs in Grafa
 1. Clone this repo locally where you have space to host the data gathered (one GB should be plenty!) 
 1. [Install Docker 17.12.0+ (preferably 18.02.0+)](https://docs.docker.com/install/)
 1. [Install the latest Docker Compose](https://docs.docker.com/compose/install/)
-1. Create directories for data for storage: 
+1. Create directories for data for storage (in the cloned directory): 
   * `mkdir grafana-data prometheus-data`
   * `chown 472 grafana-data`
   
