@@ -2,7 +2,7 @@
 
 A simple network latency and packet loss monitor, with beautiful graphs in Grafana!
 
-![in action](https://s3-us-west-2.amazonaws.com/pinger-static/pinger.png#1)
+![in action](https://s3-us-west-2.amazonaws.com/pinger-static/pinger.png#2)
 
 ### Installation
 
