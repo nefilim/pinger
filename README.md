@@ -13,8 +13,6 @@ A simple network latency and packet loss monitor, with beautiful graphs in Grafa
 
 ### Configuration
 
-After the services are running and gathering data
-
 1. Modify `etc/application.conf` to include the hosts you want to monitor
 1. Start all the services with: `docker-compose up -d` (it will start containers for Pinger, Grafana, Prometheus)
 1. Check the Pinger logs to make sure your configuration were picked up: `docker-compose logs pinger`
