@@ -24,7 +24,7 @@ scrape_configs:
 
     # metrics_path defaults to '/metrics'
     # scheme defaults to 'http'.
-    scrape_interval: 3s
+    scrape_interval: 2s
 
     static_configs:
     - targets: ['pinger:8080']
