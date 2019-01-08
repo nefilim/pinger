@@ -2,6 +2,8 @@
 
 A simple network latency and packet loss monitor, with beautiful graphs in Grafana!
 
+Zero external dependencies!
+
 ![in action](https://s3-us-west-2.amazonaws.com/pinger-static/pinger.png#2)
 
 ### Installation
@@ -46,6 +48,16 @@ Your Grafana & Prometheus data will be stored on your docker host in `./grafana-
 1. Repeat steps 4 - 12 for additional networks
 1. **IMPORTANT:** save your new dashboard with Cmd+S / Ctrl+S 
 
+
+### Alternatives 
+
+- The original: SmokePing https://oss.oetiker.ch/smokeping/ 
+  - perl & RRD .. 'nuff said
+
+- The healthy alternative: Vaping https://github.com/20c/vaping 
+  - unreasonably high CPU usage for me https://github.com/20c/vaping/issues/33
+  - requires manual installation of frameworks and dependencies, no isolation 
+  - probably more functionality than I needed
 
 
  
