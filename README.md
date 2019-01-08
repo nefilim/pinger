@@ -29,7 +29,7 @@ Your Grafana & Prometheus data will be stored on your docker host in `./grafana-
 
 ### Setting up Grafana
 
-1. Login with the default credentials (admin/admin) at http://your_docker_host:3000
+1. Login to the Grafana console at http://your_docker_host:3000 with the default credentials, username: admin password: admin
 1. Change the admin credentials or click Skip
 1. Click on `Create your first data source`
 1. Select Prometheus

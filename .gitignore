@@ -1,1 +1,4 @@
 *.iml
+grafana-data/
+prometheus-data/
+.idea

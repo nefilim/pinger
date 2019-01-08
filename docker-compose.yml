@@ -12,6 +12,9 @@ services:
       - type: bind
         source: ./grafana-data
         target: /var/lib/grafana
+      - type: bind
+        source: ./prometheus-datasource.yml
+        target: /usr/share/grafana/conf/provisioning/datasources/prometheus.yml
 
   prometheus:
     image: prom/prometheus
