@@ -44,7 +44,7 @@ Your Grafana & Prometheus data will be stored on your docker host in `./grafana-
 1. Click `X` on the far right of the Graph pane to close it
 1. At the top right, click the Add panel button (`+`) and select graph
 1. Repeat the last process but this time for packet loss using query (`average_packetloss{network="X"}`)
-   - I like to set the Y axis minimum explicitly to 0 for packet loss
+   - I like to set the Y axis minimum explicitly to 0 for packet loss (Axes tab, Left Y, Y-min = 0)
 1. Repeat steps 4 - 12 for additional networks
 1. **IMPORTANT:** save your new dashboard with Cmd+S / Ctrl+S 
 
