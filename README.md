@@ -29,20 +29,20 @@ Your Grafana & Prometheus data will be stored on your docker host in `./grafana-
 
 ### Setting up Grafana
 
-1. Login to the Grafana console at http://your_docker_host:3000 with the default credentials, username: admin password: admin
+1. Login to the Grafana console at http://your_docker_host:3000 with the default credentials, **username**: admin **password**: admin
 1. Change the admin credentials or click Skip
-1. Click on `Create your first data source`
-1. Select Prometheus
-1. In the HTTP/Access section enter: `http://prometheus:9090/`
-1. Click `Save & Test` - it should show a green success box "Data source is working"
-1. Click on the four squares in the left hand column to go back to the Home Dashboard
-1. Click on `Create your first dashboard`
+1. Click on `New dashboard`
 1. In the New Panel pane, select Graph
 1. Hover over the graph and press `e` to edit it
+1. In the `Data Source` dropdown under the Metrics tab, select `PingerPrometheus`
 1. In the Metrics tab for Series A enter the following prometheus query: `average_latency{network="internal"}`
 1. In the Legend format box below enter: `{{host}}`
 1. In the General Tab enter a suitable title `Internal Latency`
-1. Repeat this process for additional networks and for packet loss (`average_packetloss{network="X"}`) - I like to set the Y axis minimum to 0 for packet loss
+1. Click `X` on the far right of the Graph pane to close it
+1. At the top right, click the Add panel button (`+`) and select graph
+1. Repeat the last process but this time for packet loss using query (`average_packetloss{network="X"}`)
+   - I like to set the Y axis minimum explicitly to 0 for packet loss
+1. Repeat steps 4 - 12 for additional networks
 1. **IMPORTANT:** save your new dashboard with Cmd+S / Ctrl+S 
 
 
