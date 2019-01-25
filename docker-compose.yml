@@ -39,6 +39,7 @@ services:
   pinger:
     image: nefilim/pinger:1.0
     container_name: pinger
+    restart: always
     command: -Xmx=64m -Xms=64m -Dconfig.file=/opt/docker/etc/application.conf -Dlogback.configurationFile=/opt/docker/etc/logback.xml
     networks:
       - pinger-net
