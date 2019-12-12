@@ -23,8 +23,9 @@ services:
     ports:
       - 9090:9090
     command:
-      # prometheus retention period
+      - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.retention=7d'
+      - '--storage.tsdb.path=/prometheus'
     networks:
       - pinger-net
     volumes: 
