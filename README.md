@@ -16,6 +16,8 @@ Zero external dependencies!
 1. If your Docker host is running Linux, you'll also need the following:
   * `chown 472 grafana-data`
   
+**NOTE** for RaspberryPi 3/4: Please update the docker-compose and use the `nefilim/pinger_arm64:1.1` image instead.   
+  
 ### Configuration
 
 1. Modify `etc/application.conf` to include the hosts you want to monitor
